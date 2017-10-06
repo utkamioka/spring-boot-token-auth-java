@@ -1,2 +1,6 @@
 http GET http://localhost:8080/hello
 http GET http://localhost:8080/hello/abc
+http GET http://localhost:8080/api1/books 'Authorization:Bearer xxx'
+http GET http://localhost:8080/api2/books 'Authorization:Bearer xxx'
+
+w3m -header 'Authorization:Bearer xxx' http://localhost:8080/pages/index

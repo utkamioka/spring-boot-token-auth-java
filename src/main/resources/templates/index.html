@@ -1,0 +1,21 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>index</title>
+</head>
+<body>
+<p>index</p>
+<div th:text="${#authentication.name}">
+    The value of the "name" property of the authentication object should appear here.
+</div>
+<p>
+    role:
+    <span sec:authorize="hasRole('ROLE_USER')">USER</span>
+    <span sec:authorize="hasRole('ROLE_ADMIN')">ADMIN</span>
+    <span sec:authorize="hasRole('ROLE_GUEST')">GUEST</span>
+</p>
+</body>
+</html>
